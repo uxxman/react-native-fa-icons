@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Text, StyleSheet } from 'react-native';
-import Icons from './FontAwesomeIcons';
+import Icons from './lib/FontAwesomeIconUnicodes';
 
 export default class Icon extends PureComponent {
   render() {
