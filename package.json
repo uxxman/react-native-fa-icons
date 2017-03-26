@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/uxman-sherwani/react-native-fa-icons/issues"
   },
-  "homepage": "https://github.com/uxman-sherwani/react-native-fa-icons#readme"
+  "homepage": "https://github.com/uxman-sherwani/react-native-fa-icons#readme",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  }
 }
