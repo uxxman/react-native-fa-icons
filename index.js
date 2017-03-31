@@ -26,7 +26,7 @@ export default class Icon extends PureComponent {
 
     return (
       <Text 
-        allowFontScaling={allowFontScaling || true} 
+        allowFontScaling={allowFontScaling} 
         style={[styles.icon, style]}
       >
         {Icons[name]}
