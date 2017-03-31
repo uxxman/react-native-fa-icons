@@ -47,13 +47,17 @@ import Icon from 'react-native-fa-icons';
 // OR
 
 <Text style={{ fontSize: 45, color: 'blue' }}>
-  <Icon name='user' />
+  <Icon name='user' allowFontScaling />
 </Text>
 ```
 
+# Props
+| prop | required | type | description |
+| ---- | ---- | ----| ---- |
+| name | Yes | string | Icon name from [here](http://fontawesome.io/icons/). |
+| style | No | Style Object | react-native style object |
+| allowFontScaling | No (Default: true) | boolean | Should Icon font scale based on user settings |
 
-# Icons List
-You can use all the icons listed at Fontawesome v4.7.0 from [here]((http://fontawesome.io/icons/)).
 
 # Why this is fast, and uses almost no extra memory
 This package uses the Text element to render Icons. The Text element delegates
