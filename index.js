@@ -1,3 +1,5 @@
+// @flow
+
 import React, { PureComponent, PropTypes } from 'react';
 import { Text, StyleSheet } from 'react-native';
 import Icons from './lib/FontAwesomeIconUnicodes';
@@ -11,15 +13,17 @@ import Icons from './lib/FontAwesomeIconUnicodes';
     allowFontScaling={BOOLEAN}
   />
   *
-*/
+**/
 
-export default class Icon extends PureComponent {
-  static propTypes = {
-    name: PropTypes.string.isRequired,
-    style: PropTypes.any,
-    allowFontScaling: PropTypes.bool
-  }
 
+type Props = {
+  name: string,
+  style?: any,
+  allowFontScaling?: boolean
+};
+
+
+export default class Icon extends PureComponent<void, Props, void> {  
 
   render() {
     const { name, style, allowFontScaling } = this.props;
