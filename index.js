@@ -8,6 +8,7 @@ import Icons from './lib/FontAwesomeIconUnicodes';
   * Example usage:
   *
   <Icon
+    onPress={() => console.log("item clicked")}
     name='STRING'
     style={OBJECT}
     allowFontScaling={BOOLEAN}
@@ -24,12 +25,15 @@ type Props = {
 
 
 export default class Icon extends PureComponent<void, Props, void> {  
-
+  static defaultProps = {
+    onPress: ()=>{}
+  }
   render() {
     const { name, style, allowFontScaling } = this.props;
 
     return (
-      <Text 
+      <Text
+        onPress={this.props.onPress}
         allowFontScaling={allowFontScaling} 
         style={[styles.icon, style]}
       >
