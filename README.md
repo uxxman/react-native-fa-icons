@@ -57,6 +57,7 @@ import Icon from 'react-native-fa-icons';
 | name | Yes | string | Icon name from [here](http://fontawesome.io/icons/). |
 | style | No | Style Object | react-native style object |
 | allowFontScaling | No (Default: true) | boolean | Should Icon font scale based on user settings |
+| onPress | No | Function | Function to execute on press event |
 
 
 # Why this is fast, and uses almost no extra memory
