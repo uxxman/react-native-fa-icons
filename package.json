@@ -32,7 +32,8 @@
     "react": "*",
     "react-native": "*"
   },
-  "dependencies": {
-    "flow-bin": "^0.49.1"
+  "dependencies": {},
+  "devDependencies": {
+    "flow-bin": "^0.55.0"
   }
 }
