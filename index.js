@@ -11,6 +11,7 @@ import Icons from './lib/FontAwesomeIconUnicodes';
     name='STRING'
     style={OBJECT}
     allowFontScaling={BOOLEAN}
+    onPress={FUNCTION}
   />
   *
 **/
@@ -19,19 +20,21 @@ import Icons from './lib/FontAwesomeIconUnicodes';
 type Props = {
   name: string,
   style?: any,
-  allowFontScaling?: boolean
+  allowFontScaling?: boolean,
+  onPress?: Function
 };
 
 
 export default class Icon extends PureComponent<Props, void> {  
 
   render() {
-    const { name, style, allowFontScaling } = this.props;
+    const { name, style, allowFontScaling, onPress } = this.props;
 
     return (
       <Text 
         allowFontScaling={allowFontScaling} 
         style={[styles.icon, style]}
+        onPress={onPress}
       >
         {Icons[name]}
       </Text>
