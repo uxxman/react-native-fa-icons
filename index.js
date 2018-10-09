@@ -7,34 +7,26 @@ import Icons from './lib/FontAwesomeIconUnicodes';
 /**
   * Example usage:
   *
-  <Icon
-    name='STRING'
-    style={OBJECT}
-    allowFontScaling={BOOLEAN}
-    onPress={FUNCTION}
-  />
+  <Icon name='STRING' />
   *
 **/
 
 
 type Props = {
   name: string,
-  style?: any,
-  allowFontScaling?: boolean,
-  onPress?: Function
+  style?: any
 };
 
 
 export default class Icon extends PureComponent<Props, void> {  
 
   render() {
-    const { name, style, allowFontScaling, onPress } = this.props;
+    const { name, style } = this.props;
 
     return (
-      <Text 
-        allowFontScaling={allowFontScaling} 
+      <Text
+        {...this.props}
         style={[styles.icon, style]}
-        onPress={onPress}
       >
         {Icons[name]}
       </Text>

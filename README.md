@@ -24,40 +24,32 @@ Font Awesome Icons for React Native. Inspired from [react-native-fontawesome](ht
 
 # Adding Font File
 
-### Manually
-
-[Adding Custom Fonts to A React Native Application for IOS](https://medium.com/@dabit3/adding-custom-fonts-to-react-native-b266b41bff7f)
-
-[Adding Custom Fonts to A React Native Application for Android](https://medium.com/@gattermeier/custom-fonts-in-react-native-for-android-b8a331a7d2a7)
-
 ### Automatically
 
 `react-native link react-native-fa-icons`
 
 **Note:** There is no Java/ObjectiveC/swift binaries added using this command, it simply adds the font file to your android and ios projects.
 
+### Manually
+
+[Adding Custom Fonts to A React Native Application for IOS](https://medium.com/@dabit3/adding-custom-fonts-to-react-native-b266b41bff7f)
+
+[Adding Custom Fonts to A React Native Application for Android](https://medium.com/@gattermeier/custom-fonts-in-react-native-for-android-b8a331a7d2a7)
 
 
 # Usage
 ```javascript
 import Icon from 'react-native-fa-icons';
 
-<Icon name='address-book' style={{ fontSize: 45, color: 'green' }} />
-
-// OR
-
-<Text style={{ fontSize: 45, color: 'blue' }}>
-  <Icon name='user' allowFontScaling />
-</Text>
+<Icon name="address-book" style={{ fontSize: 45, color: 'green' }} />
 ```
 
 # Props
 | prop | required | type | description |
 | ---- | ---- | ----| ---- |
 | name | Yes | string | Icon name from [here](http://fontawesome.io/icons/). |
-| style | No | Style Object | react-native style object |
-| allowFontScaling | No (Default: true) | boolean | Should Icon font scale based on user settings |
-| onPress | No | Function | Function to execute on press event |
+
+All props supported by react-native `Text` are also supported by `Ìcon`. See: https://facebook.github.io/react-native/docs/text#props
 
 
 # Why this is fast, and uses almost no extra memory
