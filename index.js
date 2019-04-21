@@ -21,11 +21,11 @@ type Props = {
 export default class Icon extends PureComponent<Props, void> {  
 
   render() {
-    const { name, style } = this.props;
+    const { name, style, ...other } = this.props;
 
     return (
       <Text
-        {...this.props}
+        {...other}
         style={[styles.icon, style]}
       >
         {Icons[name]}
